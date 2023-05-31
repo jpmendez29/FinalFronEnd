@@ -4,7 +4,7 @@ export default class Login extends Component {
     render() {
 
         return (
-            <form className='container mt-5 '>
+            <form className='container mt-5 w-30'>
 
                     <div className="form-outline mb-4">
                         <label className="form-label" htmlFor="form2Example1">Email address</label>

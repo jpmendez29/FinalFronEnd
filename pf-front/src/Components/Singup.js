@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Singup extends Component {
     render() {
         return (
-            <form className='container mt-5 '>
+            <form className='container mt-5 w-30'>
 
                     <div className="row mb-4">
                         <div className="col">
