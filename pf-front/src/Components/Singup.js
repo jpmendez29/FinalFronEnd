@@ -42,21 +42,22 @@ export default class Singup extends Component {
                     </div>
 
 
-                    <div className="text-center">
+                    <div className="text-center mb-4">
+                        <p>Not a member? <a href="#!">Register</a></p>
                         <p>or sign up with:</p>
-                        <button type="button" className="btn btn-secondary btn-floating mx-1">
+                        <button type="button" className="btn btn-outline-primary btn-floating mx-1">
                             <i className="fab fa-facebook-f"></i>
                         </button>
 
-                        <button type="button" className="btn btn-secondary btn-floating mx-1">
+                        <button type="button" className="btn btn-outline-danger btn-floating mx-1">
                             <i className="fab fa-google"></i>
                         </button>
 
-                        <button type="button" className="btn btn-secondary btn-floating mx-1">
-                            <i className="fab fa-twitter "></i>
+                        <button type="button" className="btn btn-outline-primary btn-floating mx-1">
+                            <i className="fab fa-twitter"></i>
                         </button>
 
-                        <button type="button" className="btn btn-secondary btn-floating mx-1">
+                        <button type="button" className="btn btn-outline-dark btn-floating mx-1">
                             <i className="fab fa-github"></i>
                         </button>
                     </div>
