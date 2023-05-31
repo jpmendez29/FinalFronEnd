@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import './App.css';
 
 
@@ -14,6 +15,7 @@ function App() {
   return (
         <Router>
             <Navigation/>
+            
 
           <Routes>
             <Route path='/login' exact Component={Login}/>
