@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { useState } from "react";
-import { Link, Navigate, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 const Singup = ({ users, setUsers }) => {
     const Navigate = useNavigate();
@@ -29,7 +29,7 @@ const Singup = ({ users, setUsers }) => {
         // Restablecer los campos del formulario
         resetall();
 
-        Navigate("/login")
+        Navigate("/")
     };
 
     const resetall = async () => {

@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 import './App.css';
 
@@ -16,7 +18,8 @@ import Navigation from './Components/Navigation';
 
 function App() {
   const [users, setUsers] = useState([]);
-
+  const [user, setUser] = useState({});
+  console.log(user)
 
   return (
     
@@ -24,10 +27,11 @@ function App() {
             <Navigation/>
 
           <Routes>
-            <Route path='/login' exact element={<Login users={users} setUsers={setUsers}/>}/>
+            <Route path='/' exact element={<Login users={users} setUser={setUser} />}/>
             <Route path='/singup' exact element={<Singup  users={users} setUsers={setUsers}/>}/>
+            {/* <Route path='/home' exact element={<Home users={user} />}/> */}
           </Routes>
-
+          
         </Router>
   );
 }

@@ -17,8 +17,8 @@ export default class Navigation extends Component {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 
               <div className="navbar-nav ms-auto text-center ">
-                <Link className="nav-link" to="/"> Home</Link>
-                <Link className="nav-link" to="/login"> Login</Link>
+                {/* <Link className="nav-link" to="/home"> Home</Link> */}
+                <Link className="nav-link" to="/"> Login</Link>
                 <Link className="nav-link" to="/singup"> Singup</Link>
               </div>
 
