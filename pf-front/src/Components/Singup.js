@@ -26,7 +26,6 @@ const Singup = ({ users, setUsers }) => {
 
         await setUsers([...users, newUser]);
 
-        // Restablecer los campos del formulario
         resetall();
 
         Navigate("/")
