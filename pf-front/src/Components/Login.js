@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 
-export default class Login extends Component {
-    render() {
+const Login = ({ users, setUsers }) => {
+console.log(users);
+
+    const validateLogin = async (event) =>{
+        
+
+    }
+
 
         return (
-            <form className='container mt-5 w-30'>
-
+            <form className='container mt-5 w-30' onSubmit={validateLogin}>
                     <div className="form-outline mb-4">
                         <label className="form-label" htmlFor="form2Example1">Email address</label>
                         <input type="email" id="form2Example1" className="form-control border-secondary-subtle" />
@@ -52,4 +57,6 @@ export default class Login extends Component {
                 </form>
         )
     }
-}
+
+export default Login;
+
