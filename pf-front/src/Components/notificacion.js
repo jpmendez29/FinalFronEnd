@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
-const Calendario = () => {
+const notificaciones = () => {
   const [citas, setCitas] = useState([]);
 
   // Obtener citas agendadas desde algún origen de datos //Calendar
@@ -46,4 +46,4 @@ const Calendario = () => {
   );
 };
 
-export default Calendario;
+export default notificaciones;

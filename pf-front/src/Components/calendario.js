@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react'
+import { useState } from "react";
 
-const Calendar = () => {
+const Calendario = ({user}) => {
   // Obtener la fecha actual
   const currentDate = new Date();
   const currentMonth = currentDate.getMonth();
@@ -9,6 +10,7 @@ const Calendar = () => {
   // Estado para almacenar el mes y el año seleccionados
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedYear, setSelectedYear] = useState(currentYear);
+
 
   // Obtener los nombres de los meses
   const monthNames = [
@@ -61,4 +63,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default Calendario;

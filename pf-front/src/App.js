@@ -14,6 +14,8 @@ import './App.css';
 import Login from './Components/Login';
 import Singup from './Components/Singup';
 import Navigation from './Components/Navigation';
+import Calendario from './Components/Calendario'
+
 
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
             <Route path='/' exact element={<Login users={users} setUser={setUser} />}/>
             <Route path='/singup' exact element={<Singup  users={users} setUsers={setUsers}/>}/>
             
-            {/* <Route path='/home' exact element={<Home users={user} />}/> */}
+            <Route path='/home' exact element={<Calendario users={user} />}/>
           </Routes>
           
         </Router>
