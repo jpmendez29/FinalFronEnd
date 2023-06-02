@@ -42,7 +42,7 @@ const Login = ({users , setUser}) => {
                 theme: "dark",
             });
             setTimeout(() => {
-                Navigate('/calendario'); 
+                Navigate('/home'); 
             }, 2000);
         }else{
             

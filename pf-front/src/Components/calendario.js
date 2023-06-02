@@ -1,64 +1,39 @@
-import React, { Component } from 'react'
-import { useState } from "react";
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import { ToastContainer, toast } from 'react-toastify';
 
-const Calendario = ({user}) => {
-  // Obtener la fecha actual
-  const currentDate = new Date();
-  const currentMonth = currentDate.getMonth();
-  const currentYear = currentDate.getFullYear();
+const Calendario = ({ users }) => {
+  const [date, setDate] = useState(new Date());
 
-  // Estado para almacenar el mes y el año seleccionados
-  const [selectedMonth, setSelectedMonth] = useState(currentMonth);
-  const [selectedYear, setSelectedYear] = useState(currentYear);
-
-
-  // Obtener los nombres de los meses
-  const monthNames = [
-    'January', 'February', 'March', 'April', 'May', 'June', 'July',
-    'August', 'September', 'October', 'November', 'December'
-  ];
-
-  // Función para cambiar al mes anterior
-  const goToPreviousMonth = () => {
-    setSelectedYear(selectedMonth === 0 ? selectedYear - 1 : selectedYear);
-    setSelectedMonth(selectedMonth === 0 ? 11 : selectedMonth - 1);
+  const handleDateChange = (date) => {
+    setDate(date);
   };
 
-  // Función para cambiar al mes siguiente
-  const goToNextMonth = () => {
-    setSelectedYear(selectedMonth === 11 ? selectedYear + 1 : selectedYear);
-    setSelectedMonth(selectedMonth === 11 ? 0 : selectedMonth + 1);
+  const handleDoubleClick = async (date) => {
+    await toast.success(`cita agendada para ${users[0].firstname} el dia ${date}`, {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+  });
+    console.log(`Usuario: ${users[0].firstname}`);
   };
-
-  // Obtener el número de días en el mes seleccionado
-  const daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate();
-
-  // Crear una matriz de los días del mes
-  const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
   return (
-    <div>
-      <h1>{monthNames[selectedMonth]} {selectedYear}</h1>
-      <button onClick={goToPreviousMonth}>Previous Month</button>
-      <button onClick={goToNextMonth}>Next Month</button>
-      <table>
-        <thead>
-          <tr>
-            <th>Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-          </tr>
-        </thead>
-        <tbody>
-          {days.map((day, index) => (
-            <td key={index}>{day}</td>
-          ))}
-        </tbody>
-      </table>
+    <div className="container text-center mt-5">
+      <h1>Calendario</h1>
+      <Calendar
+        className="mx-auto mt-4"
+        onChange={handleDateChange}
+        value={date}
+        onClickDay = {handleDoubleClick}
+      />
+      <ToastContainer />
     </div>
   );
 };

@@ -32,7 +32,7 @@ function App() {
             <Route path='/' exact element={<Login users={users} setUser={setUser} />}/>
             <Route path='/singup' exact element={<Singup  users={users} setUsers={setUsers}/>}/>
             
-            <Route path='/home' exact element={<Calendario users={user} />}/>
+            <Route path='/home' exact element={<Calendario users={users} />}/>
           </Routes>
           
         </Router>
