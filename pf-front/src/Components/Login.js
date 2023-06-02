@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 
+
 const Login = ({users , setUser}) => {
     
     console.log(users);
@@ -41,7 +42,7 @@ const Login = ({users , setUser}) => {
                 theme: "dark",
             });
             setTimeout(() => {
-                /* Navigate('/home'); */
+                Navigate('/calendario'); 
             }, 2000);
         }else{
             

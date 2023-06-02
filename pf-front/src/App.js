@@ -29,6 +29,7 @@ function App() {
           <Routes>
             <Route path='/' exact element={<Login users={users} setUser={setUser} />}/>
             <Route path='/singup' exact element={<Singup  users={users} setUsers={setUsers}/>}/>
+            
             {/* <Route path='/home' exact element={<Home users={user} />}/> */}
           </Routes>
           
